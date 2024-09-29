@@ -182,4 +182,50 @@ void deleteNode(int value){
 }
 
 
+## SEARCHING A NODE IN A LINKED LIST
+
+To search for a node in a linked list, one should follow the steps bellow
+1. Check if the list is empty.
+    1a. if the list is empty, let the user know and end the program.
+    1b. if the list is not empty, create a temporary node that will be used to traverese the list and a bool too keep tack if the value is found or not.
+    1c. initialize an index int to keep track of the indices of the values.
+    
+2. Traverse the list for aslong as the following two conditions are met:
+    2a. aslong as we aren't at the end of the list
+    2b. aslong as the value we are looking for is not equal to the value of the temporary node
+    
+    while(current!=nullptr && current->data != value)
+    
+    
+3. check if we are at the end of the list
+    3a. if so, print out a message to the user and end the program
+    3b. if we are not at the end of the list and the value has been found, print out a message indicating so and its index 
+    
+The method is written down bellow.
+
+    void searchNode(int value){
+        if(head == NULL){
+            cout<<"The list is empty!!!\n";
+        }
+        else{
+            Node* current = head;
+            int index = 0;
+            bool isFound = false;
+            
+            while(current!= nullptr && current->data!=value){
+                current = current->next;
+                index = index + 1;
+            }
+            if(current != nullptr && current->data == value){
+                isFound = true;
+                cout<<"The node has been found at index "<<index<<endl;
+                
+            }
+            else{
+                cout<<"The node is not in the list!!!!\n";
+            }
+        }
+    }
+
+
 
