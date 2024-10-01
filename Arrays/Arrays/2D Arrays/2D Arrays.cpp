@@ -20,8 +20,8 @@ public:
         cout<<"Enter number of cols: ";
         cin>>cols;
         
-        myTwoDArray = new int*[rows];
-        for(int i =0; i<rows; i++){
+        myTwoDArray = new int*[rows]; //crete an array of "rows" rows.
+        for(int i =0; i<rows; i++){ // for each row we have created a collumn.
             myTwoDArray[i] = new int[cols];
         }
         cout<<"Enter the values of the array: \n";
