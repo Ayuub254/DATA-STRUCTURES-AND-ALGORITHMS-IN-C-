@@ -40,26 +40,27 @@ public:
             head = newNode;
         }
     }
-    void insertNodeAtTheMiddle(int value, int position){
+    void insertNodeInTheMiddle(int value, int position){
         Node* newNode = new Node;
         newNode->data = value;
         newNode->next = NULL;
         
         if(head == NULL){
             head = newNode;
-        }
-        else{
+            
+        }else{
             Node* current = head;
             for(int i=0; i<position-1 && current->next!=head; i++){
                 current = current->next;
             }
+            
             newNode->next = current->next;
             current->next = newNode;
         }
         
     }
     
-    void insertNodeAtTheEnd(int value){
+    void insertNodeInTheEnd(int value){
         Node* newNode = new Node;
         newNode->data = value;
         newNode->next = NULL;
@@ -68,14 +69,14 @@ public:
             head = newNode;
         }
         else{
-            Node* current = head;
-            while(current->next!=head){
-                current = current->next;
+            Node* temp = head;
+            while(temp->next!= head){
+                temp = temp->next;
             }
-            
-            current->next = newNode;
+            temp->next = newNode;
             newNode->next = head;
         }
+        
     }
     
     void display(){
@@ -98,8 +99,8 @@ int main(){
     list.insertNodeAtTheBegining(50);
     list.insertNodeAtTheBegining(60);
     list.insertNodeAtTheBegining(70);
-    list.insertNodeAtTheMiddle(400, 4);
-    list.insertNodeAtTheEnd(600);
+    list.insertNodeInTheMiddle(400, 4);
+    list.insertNodeInTheEnd(600);
     list.display();
     return 0;
 }
