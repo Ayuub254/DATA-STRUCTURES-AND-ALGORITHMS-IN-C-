@@ -67,5 +67,14 @@ void bubbleSort(int Arr[], int n){
 
 in above algorithm, we used 'n-1-i' in the second for loop because after every pass the number of comaprisons reduce by 1.
 
+**BUBBLE SORT ALGORITHM ANALYSIS:
+    1. Best case    -> O(n)
+    2. Average case -> O(n^2)
+    3. Worst case   -> O(n^2)
+    4. Space complexity -> O(1)
+    5. Stable           -> YES
+    6. When to use      -> small datasets, partialy sorted datasets.
+    7. When not to use  -> large datasets, Random unsorted data.
+     
 
             
